@@ -1,0 +1,15 @@
+
+
+  <div>
+    <h3><u>Recipe: <%=@recipe.id%></u></h3>
+    <p style="text-indent: 20px"><u><i>Name</u>:</i> <%= @recipe.name %></p>
+    <p style="text-indent: 20px"><u><i>Ingredients</u>:</i> <%= @recipe.ingredients %></p>
+    <p style="text-indent: 20px"><u><i>Cook Time</u>:</i> <%= @recipe.cook_time.to_i %> minutes</p>
+
+  </div>
+
+<form method="post" action="/recipes/<%=@recipe.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+
+  <b><input type="submit" style="color:white; background-color:red" value="delete" </b>
+</form>
